@@ -34,7 +34,7 @@ class AccessProtectServiceProvider extends ServiceProvider
      */
     public function register() {
         $this->mergeConfigFrom(
-            __DIR__ . '/../config/access-protect.php', 'access-protect'
+            __DIR__ . '/../../config/access-protect.php', 'access-protect'
         );
     }
 
@@ -42,7 +42,7 @@ class AccessProtectServiceProvider extends ServiceProvider
      * Register the views
      */
     protected function loadViews() {
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'access-protect');
+        $this->loadViewsFrom(__DIR__ . '/../../resources/views', 'access-protect');
     }
 
     /**
@@ -55,11 +55,11 @@ class AccessProtectServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
 
             $this->publishes([
-                __DIR__ . '/../resources/views' => resource_path('views/vendor/access-protect'),
+                __DIR__ . '/../../resources/views' => resource_path('views/vendor/access-protect'),
             ], 'views');
 
             $this->publishes([
-                __DIR__ . '/../config' => config_path(),
+                __DIR__ . '/../../config' => config_path(),
             ], 'config');
         }
     }
