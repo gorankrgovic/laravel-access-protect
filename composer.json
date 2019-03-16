@@ -1,0 +1,48 @@
+{
+  "name": "gorankrgovic/laravel-access-protect",
+  "description": "Simple, configurable access for your laravel site. Useful in cases when you want to lock the stage or dev environment.",
+  "type": "library",
+  "license": "MIT",
+  "keywords": [
+    "laravel",
+    "protect",
+    "middleware"
+  ],
+  "authors": [
+    {
+      "name": "Goran Krgovic",
+      "email": "gorankrgovic1@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "homepage": "https://github.com/gorankrgovic/laravel-access-protect",
+  "support": {
+    "email": "gorankrgovic1@gmail.com",
+    "issues": "https://github.com/gorankrgovic/laravel-access-protect/issues",
+    "wiki": "https://github.com/gorankrgovic/laravel-access-protect/wiki",
+    "source": "https://github.com/gorankrgovic/laravel-access-protect",
+    "docs": "https://github.com/gorankrgovic/laravel-access-protect/wiki"
+  },
+  "require": {
+    "php": "^7.0",
+    "illuminate/support": "~5.5.0|~5.6.0|~5.7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Gox\\Laravel\\Http\\Middleware\\": "Http/Middleware",
+      "Gox\\Laravel\\AccessProtect\\": "src/"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Gox\\Laravel\\AccessProtect\\Providers\\AccessProtectServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable" : true
+}
